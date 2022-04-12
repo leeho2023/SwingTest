@@ -95,6 +95,7 @@ public class Main extends JFrame {
 						frame.setVisible(true);
 						idInputField.setText("");
 						passwordField.setText("");
+						setVisible(false);
 					}else {
 						JOptionPane.showMessageDialog(contentPane, "아이디 혹은 비밀번호를 다시 확인해주세요", "경고", JOptionPane.WARNING_MESSAGE);
 					}
@@ -116,6 +117,7 @@ public class Main extends JFrame {
 				
 			}
 		});
+		
 		singInBtn.setBounds(186, 171, 87, 28);
 		contentPane.add(singInBtn);
 
