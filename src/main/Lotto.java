@@ -112,7 +112,6 @@ public class Lotto extends JFrame {
 					 test.add(number);
 				}
 				
-				
 				for(int ts : test) {
 					list.add(ts);
 				}
