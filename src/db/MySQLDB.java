@@ -113,6 +113,38 @@ public class MySQLDB {
 
 	}
 	
+	public int checkUserID(String mID) {
+
+		dbconnection();
+		String sql = "select count(*) from memberTBL where mID = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, mID);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				String test = rs.getString(1);
+				if(test.equals("0")) {
+					System.out.println("아이디가 없습니다.");
+					return 1;
+				}else {
+					System.out.println("로그인 성공");
+					return 0;
+					
+				}
+			}
+			System.out.println("MemberDTO updateID() 메서드 실행 완료");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			dbclose();
+		}
+		return 0;
+
+	}
+	
+	
 	public boolean checkUser(String mID, String mPW) {
 
 		dbconnection();
