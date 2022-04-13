@@ -23,25 +23,6 @@ public class Lotto extends JFrame {
 	DefaultListModel<String> listModel = new DefaultListModel<String>();
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Lotto frame = new Lotto();
-					frame.setVisible(false);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public Lotto() {
 		setBackground(Color.PINK);
 		setBounds(100, 100, 800, 800);

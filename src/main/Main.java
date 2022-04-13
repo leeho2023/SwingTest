@@ -20,10 +20,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JPasswordField;
 
+@SuppressWarnings({ "serial", "unused" })
 public class Main extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField idInputField;
+	@SuppressWarnings("unused")
 	private JTextField pwInputField;
 	private JButton loginBtn;
 	private JButton singInBtn;
